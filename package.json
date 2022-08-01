@@ -1,0 +1,38 @@
+{
+  "name": "JSCodeshiftTypeCastingError",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "5.11.10",
+    "@testing-library/react": "^12.1.4",
+    "@types/jscodeshift": "^0.11.5",
+    "ast-types": "^0.14.2",
+    "jest": "^26.6.0",
+    "jscodeshift": "^0.13.1",
+    "ts-jest": "^26.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{ts,tsx}",
+      "!**/node_modules/**"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
+  "scripts": {
+    "codeshift": "jscodeshift --parser tsx --extensions tsx -t ./codemods/tsCastCodemodExample.ts ./src/components",
+    "test": "jest --config codemods/jest.config.ts"
+  }
+}
