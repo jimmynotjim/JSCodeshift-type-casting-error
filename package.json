@@ -32,7 +32,7 @@
     }
   },
   "scripts": {
-    "codeshift": "jscodeshift --parser tsx --extensions tsx -t ./codemods/tsCastCodemodExample.ts ./src/components",
+    "codeshift": "jscodeshift --parser tsx --extensions tsx -t ./codemods/tsCastCodemodExample ./src/components",
     "test": "jest --config codemods/jest.config.ts"
   }
 }

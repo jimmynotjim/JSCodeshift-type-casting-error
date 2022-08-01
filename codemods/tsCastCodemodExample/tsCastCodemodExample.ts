@@ -41,9 +41,9 @@ const transformer = (file: FileInfo, api: API): string => {
        *
        * Unfortunately jscodeshift can't handle the type casting and throws it's own error:
        *
-       *    SyntaxError: [CODEMOD FILE]: Missing semicolon. (LINE NUMBER)
-       *    const retrievedValue = getJSXAttributeValue(j, element, 'alignItems') as keyof typeof valueMap;
-       *                                                                         ^
+       *    JSCodeshift-type-casting-error/codemods/tsCastCodemodExample/tsCastCodemodExample.ts: Missing semicolon. (52:76)
+       *    const retrievedValue = getJSXAttributeValue(j, element, 'testAttribute') as keyof typeof valueMap;
+       *                                                                            ^
        * 
        * Oddly there are no issues when running jscodeshift through the provided 'defineInlineTest'
        * function.
